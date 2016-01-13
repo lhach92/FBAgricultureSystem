@@ -21,12 +21,12 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    NSInteger random = arc4random() % 2;
-    if (0 == random) {
-        [self performSegueWithIdentifier:@"seguePresentLogin" sender:self];
-    } else {
+//    NSInteger random = arc4random() % 2;
+//    if (0 == random) {
+//        [self performSegueWithIdentifier:@"seguePresentLogin" sender:self];
+//    } else {
         [self performSegueWithIdentifier:@"seguePushToRoot" sender:self];
-    }
+//    }
     NSLog(@"%@", self.navigationController.viewControllers);
 }
 
