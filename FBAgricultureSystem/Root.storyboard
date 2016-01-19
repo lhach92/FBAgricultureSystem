@@ -16,6 +16,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="Vct-bx-FzJ" kind="relationship" relationship="viewControllers" id="NSV-kl-KzA"/>
+                        <segue destination="Tj5-Fc-tv6" kind="relationship" relationship="viewControllers" id="6tm-km-OVO"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ar1-eu-8fr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -96,6 +97,61 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9xE-Tw-tt0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="991" y="-1353"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="kvu-EY-9ZN">
+            <objects>
+                <navigationController id="Tj5-Fc-tv6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Um2-Zj-You"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="21T-SZ-xJa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="SXe-ys-CIe" kind="relationship" relationship="rootViewController" id="pNn-1W-Xgc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zeP-OA-p3q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="287" y="-604"/>
+        </scene>
+        <!--Seed View Controller-->
+        <scene sceneID="cew-S5-n9c">
+            <objects>
+                <viewController id="SXe-ys-CIe" customClass="SeedViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aDo-td-3gd"/>
+                        <viewControllerLayoutGuide type="bottom" id="H7v-AU-6ok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Tab-Hk-ZKd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MOV-Aq-nW6">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="SXe-ys-CIe" id="xRY-63-zoY"/>
+                                    <outlet property="delegate" destination="SXe-ys-CIe" id="GTQ-1W-7a5"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MOV-Aq-nW6" firstAttribute="width" secondItem="Tab-Hk-ZKd" secondAttribute="width" id="01H-ef-Bas"/>
+                            <constraint firstItem="MOV-Aq-nW6" firstAttribute="height" secondItem="Tab-Hk-ZKd" secondAttribute="height" id="Kqb-14-dXy"/>
+                            <constraint firstItem="MOV-Aq-nW6" firstAttribute="centerX" secondItem="Tab-Hk-ZKd" secondAttribute="centerX" id="V99-F0-kOs"/>
+                            <constraint firstItem="MOV-Aq-nW6" firstAttribute="centerY" secondItem="Tab-Hk-ZKd" secondAttribute="centerY" id="lsc-gU-EbE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="k6m-W5-nCH"/>
+                    <connections>
+                        <outlet property="tableView" destination="MOV-Aq-nW6" id="SYx-tO-fyl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l6h-MC-6MF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="991" y="-604"/>
         </scene>
     </scenes>
 </document>

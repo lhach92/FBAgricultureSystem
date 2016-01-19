@@ -21,6 +21,9 @@
 		A50DF25C1C4655F500A817F8 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A50DF25B1C4655F500A817F8 /* Root.storyboard */; };
 		A50DF2621C465D2D00A817F8 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A50DF2611C465D2D00A817F8 /* RootViewController.m */; };
 		A50DF2651C465D8B00A817F8 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A50DF2641C465D8B00A817F8 /* NewsViewController.m */; };
+		A5B82F3D1C4E36B2006B21E2 /* SeedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B82F3B1C4E36B2006B21E2 /* SeedTableViewCell.m */; };
+		A5B82F3E1C4E36B2006B21E2 /* SeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5B82F3C1C4E36B2006B21E2 /* SeedTableViewCell.xib */; };
+		A5B82F411C4E3A7C006B21E2 /* SeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B82F401C4E3A7C006B21E2 /* SeedViewController.m */; };
 		B17F77361C46B219003B4ED2 /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B17F77341C46B219003B4ED2 /* NewsTableViewCell.m */; };
 		B17F77371C46B219003B4ED2 /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B17F77351C46B219003B4ED2 /* NewsTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -69,6 +72,11 @@
 		A50DF2611C465D2D00A817F8 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		A50DF2631C465D8B00A817F8 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
 		A50DF2641C465D8B00A817F8 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
+		A5B82F3A1C4E36B2006B21E2 /* SeedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeedTableViewCell.h; sourceTree = "<group>"; };
+		A5B82F3B1C4E36B2006B21E2 /* SeedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeedTableViewCell.m; sourceTree = "<group>"; };
+		A5B82F3C1C4E36B2006B21E2 /* SeedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SeedTableViewCell.xib; sourceTree = "<group>"; };
+		A5B82F3F1C4E3A7C006B21E2 /* SeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeedViewController.h; sourceTree = "<group>"; };
+		A5B82F401C4E3A7C006B21E2 /* SeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeedViewController.m; sourceTree = "<group>"; };
 		ADCBE6F37512260E6C30FF4B /* Pods-FBAgricultureSystem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBAgricultureSystem.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FBAgricultureSystem/Pods-FBAgricultureSystem.debug.xcconfig"; sourceTree = "<group>"; };
 		B17F77331C46B219003B4ED2 /* NewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableViewCell.h; sourceTree = "<group>"; };
 		B17F77341C46B219003B4ED2 /* NewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewCell.m; sourceTree = "<group>"; };
@@ -153,9 +161,14 @@
 				A50DF2611C465D2D00A817F8 /* RootViewController.m */,
 				A50DF2631C465D8B00A817F8 /* NewsViewController.h */,
 				A50DF2641C465D8B00A817F8 /* NewsViewController.m */,
+				A5B82F3F1C4E3A7C006B21E2 /* SeedViewController.h */,
+				A5B82F401C4E3A7C006B21E2 /* SeedViewController.m */,
 				B17F77331C46B219003B4ED2 /* NewsTableViewCell.h */,
 				B17F77341C46B219003B4ED2 /* NewsTableViewCell.m */,
 				B17F77351C46B219003B4ED2 /* NewsTableViewCell.xib */,
+				A5B82F3A1C4E36B2006B21E2 /* SeedTableViewCell.h */,
+				A5B82F3B1C4E36B2006B21E2 /* SeedTableViewCell.m */,
+				A5B82F3C1C4E36B2006B21E2 /* SeedTableViewCell.xib */,
 				A50DF2271C45EE3D00A817F8 /* Main.storyboard */,
 				A50DF2591C4654B100A817F8 /* Login.storyboard */,
 				A50DF25B1C4655F500A817F8 /* Root.storyboard */,
@@ -205,7 +218,6 @@
 				A50DF2181C45EE3D00A817F8 /* Frameworks */,
 				A50DF2191C45EE3D00A817F8 /* Resources */,
 				CA9D6AF204D61CC177C91E06 /* Copy Pods Resources */,
-				8D2F70A43F4DAED3CACD6836 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -263,6 +275,7 @@
 				TargetAttributes = {
 					A50DF21A1C45EE3D00A817F8 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = N8E7BE6VY2;
 					};
 					A50DF2331C45EE3E00A817F8 = {
 						CreatedOnToolsVersion = 7.2;
@@ -303,6 +316,7 @@
 				A50DF25A1C4654B100A817F8 /* Login.storyboard in Resources */,
 				A50DF22E1C45EE3D00A817F8 /* LaunchScreen.storyboard in Resources */,
 				A50DF22B1C45EE3D00A817F8 /* Assets.xcassets in Resources */,
+				A5B82F3E1C4E36B2006B21E2 /* SeedTableViewCell.xib in Resources */,
 				B17F77371C46B219003B4ED2 /* NewsTableViewCell.xib in Resources */,
 				A50DF2291C45EE3D00A817F8 /* Main.storyboard in Resources */,
 			);
@@ -325,21 +339,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8D2F70A43F4DAED3CACD6836 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FBAgricultureSystem/Pods-FBAgricultureSystem-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		CA9D6AF204D61CC177C91E06 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -379,7 +378,9 @@
 			files = (
 				A50DF2581C46521100A817F8 /* LoginViewController.m in Sources */,
 				A50DF2261C45EE3D00A817F8 /* ViewController.m in Sources */,
+				A5B82F3D1C4E36B2006B21E2 /* SeedTableViewCell.m in Sources */,
 				A50DF2231C45EE3D00A817F8 /* AppDelegate.m in Sources */,
+				A5B82F411C4E3A7C006B21E2 /* SeedViewController.m in Sources */,
 				A50DF2651C465D8B00A817F8 /* NewsViewController.m in Sources */,
 				A50DF2201C45EE3D00A817F8 /* main.m in Sources */,
 				A50DF2621C465D2D00A817F8 /* RootViewController.m in Sources */,
@@ -523,10 +524,13 @@
 			baseConfigurationReference = ADCBE6F37512260E6C30FF4B /* Pods-FBAgricultureSystem.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FBAgricultureSystem/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fubin.FBAgricultureSystem;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lvhuan.FBAgricultureSystem;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -535,10 +539,13 @@
 			baseConfigurationReference = 0087BEF07D9F4ADCBCD1A729 /* Pods-FBAgricultureSystem.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FBAgricultureSystem/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fubin.FBAgricultureSystem;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lvhuan.FBAgricultureSystem;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
