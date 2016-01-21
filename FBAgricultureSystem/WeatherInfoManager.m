@@ -52,6 +52,19 @@
     [_locationManager startUpdatingLocation];
 }
 
+- (NSString *)getTemperatureByInfo:(NSDictionary *)dict key:(NSString *)key {
+    NSString *temperature = dict[key];
+    if (![temperature isKindOfClass:[NSNull class]]) {
+        temperature = [NSString stringWithFormat:@"%@", temperature];
+        if ([StringTools isNotEmptyString:temperature]) {
+            CGFloat kTemperatureValue = [temperature floatValue];
+            CGFloat cTemperatureValue = kTemperatureValue - 273.15;
+            temperature = [NSString stringWithFormat:@"%.2fC", cTemperatureValue];
+        }
+    }
+    return temperature;
+}
+
 - (void)getWeatherByCity:(NSString *)city country:(NSString *)country {
     [self initServerCommunicator];
     [_serverCommunicator getWeatherByCity:city country:country];
@@ -75,17 +88,13 @@
             for (NSDictionary *dailyDict in listArray) {
                 if ([self isKindOfNSDictionaryClass:dailyDict]) {
                     NSString *temperature;
+                    NSString *minTemperature;
+                    NSString *maxTemperature;
                     NSDictionary *temp = dailyDict[@"temp"];
                     if ([self isKindOfNSDictionaryClass:temp]) {
-                        temperature = temp[@"day"];
-                        if (![temperature isKindOfClass:[NSNull class]]) {
-                            temperature = [NSString stringWithFormat:@"%@", temperature];
-                            if ([StringTools isNotEmptyString:temperature]) {
-                                CGFloat kTemperatureValue = [temperature floatValue];
-                                CGFloat cTemperatureValue = kTemperatureValue - 273.15;
-                                temperature = [NSString stringWithFormat:@"%fC", cTemperatureValue];
-                            }
-                        }
+                        temperature = [self getTemperatureByInfo:temp key:@"day"];
+                        minTemperature = [self getTemperatureByInfo:temp key:@"min"];
+                        maxTemperature = [self getTemperatureByInfo:temp key:@"max"];
                     }
                     
                     NSString *weatherDesp;
@@ -98,10 +107,14 @@
                         }
                     }
                     
-                    if (temperature || weatherDesp) {
+                    if (temperature
+                        || weatherDesp
+                        || (minTemperature && maxTemperature)) {
                         WeatherInfo *wInfo = [[WeatherInfo alloc] init];
                         wInfo.temperature = temperature;
                         wInfo.weatherDesp = weatherDesp;
+                        wInfo.minTemperature = minTemperature;
+                        wInfo.maxTemperature = maxTemperature;
                         if (wInfo) {
                             [resultArray addObject:wInfo];
                         }
