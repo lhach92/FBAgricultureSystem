@@ -26,6 +26,8 @@
 @interface WeatherInfo : NSObject
 
 @property (nonatomic, copy) NSString *temperature;
+@property (nonatomic, copy) NSString *minTemperature;
+@property (nonatomic, copy) NSString *maxTemperature;
 @property (nonatomic, copy) NSString *weatherDesp;
 
 @end

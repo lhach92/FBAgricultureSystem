@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LqM-kI-oFb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LqM-kI-oFb">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
     </dependencies>
     <scenes>
         <!--Root View Controller-->
@@ -12,6 +11,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="OpS-iw-GCN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
@@ -32,6 +32,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WBD-fO-FhK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <connections>
                         <segue destination="D0c-ta-5NK" kind="relationship" relationship="rootViewController" id="koM-Ii-KhH"/>
@@ -58,8 +59,10 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Ig-sb-bbD">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
+                                        <animations/>
                                     </imageView>
                                 </subviews>
+                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="7Ig-sb-bbD" firstAttribute="width" secondItem="aJz-r1-yC5" secondAttribute="width" id="4EC-MN-IaV"/>
@@ -71,6 +74,7 @@
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fMC-hG-5iH">
                                 <rect key="frame" x="0.0" y="214" width="600" height="337"/>
+                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="D0c-ta-5NK" id="8J1-el-Zoi"/>
@@ -78,6 +82,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="aJz-r1-yC5" firstAttribute="top" secondItem="tmM-5r-SF4" secondAttribute="bottom" id="7w6-yy-18z"/>
@@ -107,6 +112,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="21T-SZ-xJa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <connections>
                         <segue destination="SXe-ys-CIe" kind="relationship" relationship="rootViewController" id="pNn-1W-Xgc"/>
@@ -130,6 +136,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MOV-Aq-nW6">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="SXe-ys-CIe" id="xRY-63-zoY"/>
@@ -137,6 +144,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="MOV-Aq-nW6" firstAttribute="width" secondItem="Tab-Hk-ZKd" secondAttribute="width" id="01H-ef-Bas"/>
@@ -165,9 +173,30 @@
                     <view key="view" contentMode="scaleToFill" id="5Vg-No-e9G">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ubb-a1-Kvd">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vWp-MD-d4Z" id="7Zc-Qa-EUm"/>
+                                    <outlet property="delegate" destination="vWp-MD-d4Z" id="e4B-gb-aHA"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ubb-a1-Kvd" firstAttribute="centerX" secondItem="5Vg-No-e9G" secondAttribute="centerX" id="4Ma-Vb-Hhd"/>
+                            <constraint firstItem="ubb-a1-Kvd" firstAttribute="width" secondItem="5Vg-No-e9G" secondAttribute="width" id="5D1-uR-rzx"/>
+                            <constraint firstItem="ubb-a1-Kvd" firstAttribute="centerY" secondItem="5Vg-No-e9G" secondAttribute="centerY" id="JaG-Pv-u8I"/>
+                            <constraint firstItem="ubb-a1-Kvd" firstAttribute="height" secondItem="5Vg-No-e9G" secondAttribute="height" id="Yet-4i-1So"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="TnJ-il-1ys"/>
+                    <connections>
+                        <outlet property="tableView" destination="ubb-a1-Kvd" id="Xcc-0M-bpm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="svq-Dt-geV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -181,6 +210,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ht1-Lh-L0M">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <connections>
                         <segue destination="vWp-MD-d4Z" kind="relationship" relationship="rootViewController" id="q7p-V0-CxW"/>
