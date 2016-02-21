@@ -310,7 +310,7 @@
 
 - (NSString*)getServerAddress
 {
-    return @"";
+    return @"http://192.168.101.190:8080/rest";
 }
 
 - (NSString*)getGetDataUrl:(NSString*)categoryId
@@ -318,6 +318,15 @@
     return @"";
 }
 
+- (void)getNewsList {
+    NSString *urlString = [NSString stringWithFormat:@"%@/app/news/list", [self getServerAddress]];
+    [self requestAsynchronous:urlString needAccessToken:NO];
+}
+
+- (void)getNewsDetailById:(NSString *)newsId {
+    NSString *urlString = [NSString stringWithFormat:@"%@/app/news/getNewsById?id=%@", [self getServerAddress], newsId];
+    [self requestAsynchronous:urlString needAccessToken:NO];
+}
 
 - (void)getWeatherByCity:(NSString *)city country:(NSString *)country
 {

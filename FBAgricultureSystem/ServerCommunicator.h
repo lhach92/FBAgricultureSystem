@@ -44,5 +44,8 @@
 - (id)parseObjectFromRequest:(ASIHTTPRequest*)request;
 
 - (void)getWeatherByCity:(NSString *)city country:(NSString *)country;
+//获取新闻列表
+- (void)getNewsList;
+- (void)getNewsDetailById:(NSString *)newsId;
 
 @end

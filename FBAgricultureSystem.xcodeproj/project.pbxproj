@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8E96F885A3FCEC14FD9F8292 /* libPods-FBAgricultureSystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C109F1F5342016990C87DF5 /* libPods-FBAgricultureSystem.a */; };
+		A50986DB1C7A02F400EDB7D7 /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A50986DA1C7A02F400EDB7D7 /* NewsDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
+		A50986E01C7A093900EDB7D7 /* NewsInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A50986DF1C7A093900EDB7D7 /* NewsInfo.m */; settings = {ASSET_TAGS = (); }; };
 		A50DF2201C45EE3D00A817F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A50DF21F1C45EE3D00A817F8 /* main.m */; };
 		A50DF2231C45EE3D00A817F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A50DF2221C45EE3D00A817F8 /* AppDelegate.m */; };
 		A50DF2261C45EE3D00A817F8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A50DF2251C45EE3D00A817F8 /* ViewController.m */; };
@@ -53,6 +55,10 @@
 /* Begin PBXFileReference section */
 		0087BEF07D9F4ADCBCD1A729 /* Pods-FBAgricultureSystem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBAgricultureSystem.release.xcconfig"; path = "Pods/Target Support Files/Pods-FBAgricultureSystem/Pods-FBAgricultureSystem.release.xcconfig"; sourceTree = "<group>"; };
 		5C109F1F5342016990C87DF5 /* libPods-FBAgricultureSystem.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FBAgricultureSystem.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A50986D91C7A02F400EDB7D7 /* NewsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsDetailViewController.h; sourceTree = "<group>"; };
+		A50986DA1C7A02F400EDB7D7 /* NewsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsDetailViewController.m; sourceTree = "<group>"; };
+		A50986DE1C7A093900EDB7D7 /* NewsInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsInfo.h; sourceTree = "<group>"; };
+		A50986DF1C7A093900EDB7D7 /* NewsInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsInfo.m; sourceTree = "<group>"; };
 		A50DF21B1C45EE3D00A817F8 /* FBAgricultureSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FBAgricultureSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A50DF21F1C45EE3D00A817F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A50DF2211C45EE3D00A817F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -141,6 +147,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A50986DD1C7A091E00EDB7D7 /* 实体类 */ = {
+			isa = PBXGroup;
+			children = (
+				A50986DE1C7A093900EDB7D7 /* NewsInfo.h */,
+				A50986DF1C7A093900EDB7D7 /* NewsInfo.m */,
+			);
+			name = "实体类";
+			sourceTree = "<group>";
+		};
 		A50DF2121C45EE3D00A817F8 = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +191,8 @@
 				A50DF2611C465D2D00A817F8 /* RootViewController.m */,
 				A50DF2631C465D8B00A817F8 /* NewsViewController.h */,
 				A50DF2641C465D8B00A817F8 /* NewsViewController.m */,
+				A50986D91C7A02F400EDB7D7 /* NewsDetailViewController.h */,
+				A50986DA1C7A02F400EDB7D7 /* NewsDetailViewController.m */,
 				A5B82F3F1C4E3A7C006B21E2 /* SeedViewController.h */,
 				A5B82F401C4E3A7C006B21E2 /* SeedViewController.m */,
 				A56B82C41C50C6C800828865 /* WeatherViewController.h */,
@@ -194,6 +211,7 @@
 				A50DF22A1C45EE3D00A817F8 /* Assets.xcassets */,
 				A50DF22C1C45EE3D00A817F8 /* LaunchScreen.storyboard */,
 				A50DF22F1C45EE3D00A817F8 /* Info.plist */,
+				A50986DD1C7A091E00EDB7D7 /* 实体类 */,
 				A56B82D21C50EB7100828865 /* Tools */,
 				A56B82CD1C50EADA00828865 /* Server */,
 				A50DF21E1C45EE3D00A817F8 /* Supporting Files */,
@@ -418,6 +436,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A56B82D81C51059800828865 /* StringTools.m in Sources */,
+				A50986DB1C7A02F400EDB7D7 /* NewsDetailViewController.m in Sources */,
 				A50DF2581C46521100A817F8 /* LoginViewController.m in Sources */,
 				A50DF2261C45EE3D00A817F8 /* ViewController.m in Sources */,
 				A5B82F3D1C4E36B2006B21E2 /* SeedTableViewCell.m in Sources */,
@@ -430,6 +449,7 @@
 				A50DF2651C465D8B00A817F8 /* NewsViewController.m in Sources */,
 				A50DF2201C45EE3D00A817F8 /* main.m in Sources */,
 				A50DF2621C465D2D00A817F8 /* RootViewController.m in Sources */,
+				A50986E01C7A093900EDB7D7 /* NewsInfo.m in Sources */,
 				B17F77361C46B219003B4ED2 /* NewsTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

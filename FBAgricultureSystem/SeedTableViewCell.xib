@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8187.4" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -17,6 +17,7 @@
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="53z-Dn-rlV">
                         <rect key="frame" x="8" y="8" width="384" height="134"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="134" id="Jsq-K7-Ub3"/>
                         </constraints>
@@ -26,6 +27,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q72-So-g4z">
                                 <rect key="frame" x="8" y="8" width="368" height="41"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="9E2-Nn-DaJ"/>
                                     <constraint firstAttribute="width" constant="368" id="OcT-v2-gC8"/>
@@ -35,6 +37,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="57" id="o5n-Bq-Jkb"/>
@@ -43,6 +46,7 @@
                         </constraints>
                     </view>
                 </subviews>
+                <animations/>
                 <constraints>
                     <constraint firstAttribute="topMargin" secondItem="53z-Dn-rlV" secondAttribute="top" id="7oM-9O-ScA"/>
                     <constraint firstItem="I0t-m2-EKA" firstAttribute="width" secondItem="53z-Dn-rlV" secondAttribute="width" id="AHq-ih-uuY"/>
@@ -52,6 +56,7 @@
                     <constraint firstAttribute="leadingMargin" secondItem="53z-Dn-rlV" secondAttribute="leading" id="mud-Gi-4CS"/>
                 </constraints>
             </tableViewCellContentView>
+            <animations/>
             <connections>
                 <outlet property="seedImageView" destination="53z-Dn-rlV" id="rBc-Jp-bQ7"/>
                 <outlet property="seedNameContentView" destination="I0t-m2-EKA" id="k1N-ND-0XH"/>

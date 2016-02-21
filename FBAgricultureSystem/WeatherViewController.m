@@ -8,13 +8,14 @@
 
 #import "WeatherViewController.h"
 #import "WeatherInfoManager.h"
+#import "MBProgressHUD.h"
 
-@interface WeatherViewController ()<WeatherInfoManagerDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface WeatherViewController ()<WeatherInfoManagerDelegate>
 {
     WeatherInfoManager *_weatherInfoManager;
     NSMutableArray *_dataArray;
 }
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UILabel *temperatureLabel;
 @end
 
 @implementation WeatherViewController
@@ -37,6 +38,7 @@
 - (void)getWeatherByLocation {
     [self initWeatherInfoManager];
     [_weatherInfoManager getWeatherByLocation];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,40 +49,18 @@
 #pragma mark -WeatherInfoManagerDelegate
 
 - (void)didGetWeatherInfo:(NSArray *)weatherInfo withError:(NSError *)error {
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
     if (!error) {
         [_dataArray removeAllObjects];
         [_dataArray addObjectsFromArray:weatherInfo];
         for (WeatherInfo *info in weatherInfo) {
             NSLog(@"\n温度：%@，天气：%@",info.temperature, info.weatherDesp);
         }
-        [_tableView reloadData];
+        if (_dataArray.count > 0) {
+            WeatherInfo *info = [_dataArray firstObject];
+            self.temperatureLabel.text = info.temperature;
+        }
     }
 }
-
-#pragma mark -UITableViewDatasource
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 50;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _dataArray.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView
-         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *cellId = @"weatherCellId";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
-    }
-    if (indexPath.row < _dataArray.count) {
-        WeatherInfo *info = _dataArray[indexPath.row];
-        cell.textLabel.text = [NSString stringWithFormat:@"%@, %@~%@", info.weatherDesp, info.minTemperature, info.maxTemperature];
-    }
-    return cell;
-}
-
-#pragma mark -UITableViewDelegate
 
 @end

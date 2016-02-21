@@ -9,10 +9,15 @@
 #import "NewsViewController.h"
 #import "UIImageView+WebCache.h"
 #import "NewsTableViewCell.h"
+#import "ServerCommunicator.h"
+#import "NewsDetailViewController.h"
+#import "NewsInfo.h"
 
-@interface NewsViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface NewsViewController () <UITableViewDataSource, UITableViewDelegate, ServerCommunicatorDelegate>
 {
     NSMutableArray *_dataArray;
+    ServerCommunicator *_serverCommunicator;
+    NewsInfo *_currentNewsInfo;
 }
 
 @property (weak, nonatomic) IBOutlet UIImageView *headerImageView;
@@ -27,11 +32,30 @@
     // Do any additional setup after loading the view.
     
     self.title = @"农业资讯";
-    _dataArray = [NSMutableArray array];
-    [self.headerImageView sd_setImageWithURL:[NSURL URLWithString:@"https://img.alicdn.com/tps/TB1dUNMLpXXXXXGXFXXXXXXXXXX-520-280.jpg"]];
-    [self createFakeData];
     
-    [self.tableView reloadData];
+    [self initData];
+    [self initUI];
+    [self getNewsArray];
+}
+
+- (void)initUI {
+    [self.headerImageView sd_setImageWithURL:[NSURL URLWithString:@"https://img.alicdn.com/tps/TB1dUNMLpXXXXXGXFXXXXXXXXXX-520-280.jpg"]];
+}
+
+- (void)initData {
+    _dataArray = [NSMutableArray array];
+}
+
+- (void)initServerCommunicator {
+    if (!_serverCommunicator) {
+        _serverCommunicator = [[ServerCommunicator alloc] init];
+        _serverCommunicator.delegate = self;
+    }
+}
+
+- (void)getNewsArray {
+    [self initServerCommunicator];
+    [_serverCommunicator getNewsList];
 }
 
 - (void)createFakeData
@@ -74,16 +98,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    self.hidesBottomBarWhenPushed = YES;
+    NewsDetailViewController *vc = segue.destinationViewController;
+    vc.newsId = _currentNewsInfo.newsId;
+}
+
 #pragma mark -UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return _dataArray.count;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 76.f;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -106,9 +131,38 @@
 
 #pragma mark -UITableViewDelegate
 
-@end
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 76.f;
+}
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row < _dataArray.count) {
+        _currentNewsInfo = _dataArray[indexPath.row];
+    }
+    [self performSegueWithIdentifier:@"goToDetailNewsVC" sender:nil];
+}
 
-@implementation NewsInfo
+#pragma mark -ServerCommunicatorDelegate
+
+- (void)handleRequestFail:(ASIHTTPRequest*)request {
+    NSLog(@"请求失败!");
+}
+
+- (void)handleRequestCompletion:(ASIHTTPRequest*)request {
+    id obj = [_serverCommunicator parseObjectFromRequest:request];
+    if ([obj isKindOfClass:[NSArray class]]) {
+        [_dataArray removeAllObjects];
+        NSArray *array = (NSArray *)obj;
+        for (NSDictionary *dict in array) {
+            NewsInfo *info = [[NewsInfo alloc] init];
+            info.newsId = dict[@"id"];
+            info.newsTitle = dict[@"title"];
+            info.newsDescription = dict[@"content"];
+            [_dataArray addObject:info];
+        }
+        [_tableView reloadData];
+    }
+}
 
 @end

@@ -59,7 +59,8 @@
         if ([StringTools isNotEmptyString:temperature]) {
             CGFloat kTemperatureValue = [temperature floatValue];
             CGFloat cTemperatureValue = kTemperatureValue - 273.15;
-            temperature = [NSString stringWithFormat:@"%.2fC", cTemperatureValue];
+            
+            temperature = [NSString stringWithFormat:@"%ld", lroundf(cTemperatureValue)];
         }
     }
     return temperature;
@@ -162,6 +163,8 @@
         default:
             break;
     }
+    
+    [self getWeatherByCity:@"beijing" country:@"china"];
 }
 
 #pragma mark -ServerCommunicatorDelegate
