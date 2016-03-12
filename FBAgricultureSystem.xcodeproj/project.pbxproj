@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8E96F885A3FCEC14FD9F8292 /* libPods-FBAgricultureSystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C109F1F5342016990C87DF5 /* libPods-FBAgricultureSystem.a */; };
-		A50986DB1C7A02F400EDB7D7 /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A50986DA1C7A02F400EDB7D7 /* NewsDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
-		A50986E01C7A093900EDB7D7 /* NewsInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A50986DF1C7A093900EDB7D7 /* NewsInfo.m */; settings = {ASSET_TAGS = (); }; };
+		A50986DB1C7A02F400EDB7D7 /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A50986DA1C7A02F400EDB7D7 /* NewsDetailViewController.m */; };
+		A50986E01C7A093900EDB7D7 /* NewsInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A50986DF1C7A093900EDB7D7 /* NewsInfo.m */; };
 		A50DF2201C45EE3D00A817F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A50DF21F1C45EE3D00A817F8 /* main.m */; };
 		A50DF2231C45EE3D00A817F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A50DF2221C45EE3D00A817F8 /* AppDelegate.m */; };
 		A50DF2261C45EE3D00A817F8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A50DF2251C45EE3D00A817F8 /* ViewController.m */; };
@@ -277,6 +277,7 @@
 				A50DF2181C45EE3D00A817F8 /* Frameworks */,
 				A50DF2191C45EE3D00A817F8 /* Resources */,
 				CA9D6AF204D61CC177C91E06 /* Copy Pods Resources */,
+				D8C089D8125472BFF4CBB798 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -411,6 +412,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FBAgricultureSystem/Pods-FBAgricultureSystem-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8C089D8125472BFF4CBB798 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FBAgricultureSystem/Pods-FBAgricultureSystem-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E5F2F3A4BB1FB8237200375C /* Check Pods Manifest.lock */ = {

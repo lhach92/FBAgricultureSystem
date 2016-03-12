@@ -8,6 +8,7 @@ pod 'ASIHTTPRequest', '~> 1.8.2'
 pod 'MBProgressHUD', '~> 0.9'
 pod 'SDWebImage', '~> 3.7.1'
 pod 'SBJson4', '~> 4.0.1'
+pod 'SlimeRefresh', '~> 0.0.1'
 
 inhibit_all_warnings!
 
