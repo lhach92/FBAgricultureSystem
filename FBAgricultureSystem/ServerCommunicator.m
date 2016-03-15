@@ -333,6 +333,16 @@
     [self requestAsynchronous:urlString needAccessToken:NO];
 }
 
+- (void)getSeedDetailById:(NSString *)seedId {
+    NSString *urlString = [NSString stringWithFormat:@"%@/app/seed/getSeedById?id=%@", [self getServerAddress], seedId];
+    [self requestAsynchronous:urlString needAccessToken:NO];
+}
+
+- (void)getRequestList {
+    NSString *urlString = [NSString stringWithFormat:@"%@/app/demand/list", [self getServerAddress]];
+    [self requestAsynchronous:urlString needAccessToken:NO];
+}
+
 - (void)getWeatherByCity:(NSString *)city country:(NSString *)country
 {
     NSString *urlString = [NSString stringWithFormat:@"http://api.openweathermap.org/data/2.5/forecast/daily?q=%@,%@&cnt=7&appid=84efe27b3f2990967690c7c9a5d3cee0&lang=zh_cn", city, country];

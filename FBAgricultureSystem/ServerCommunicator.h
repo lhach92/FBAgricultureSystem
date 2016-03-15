@@ -50,5 +50,9 @@
 
 //获取种子列表
 - (void)getSeedList;
+- (void)getSeedDetailById:(NSString *)seedId;
+
+//获取需求列表
+- (void)getRequestList;
 
 @end

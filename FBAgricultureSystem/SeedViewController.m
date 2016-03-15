@@ -10,11 +10,15 @@
 #import "SeedTableViewCell.h"
 #import "UIImageView+WebCache.h"
 #import "ServerCommunicator.h"
+#import "SeedDetailViewController.h"
+#import "SeedInfo.h"
 
 @interface SeedViewController ()<UITableViewDataSource, UITableViewDelegate>
 {
     NSMutableArray *_dataArray;
     ServerCommunicator *_serverCommunicator;
+    
+    SeedInfo *_currentSeedInfo;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -82,6 +86,12 @@
     [_tableView reloadData];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    self.hidesBottomBarWhenPushed = YES;
+    SeedDetailViewController *vc = segue.destinationViewController;
+    vc.seedId = _currentSeedInfo.seedId;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -115,6 +125,13 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row < _dataArray.count) {
+        _currentSeedInfo = _dataArray[indexPath.row];
+    }
+    [self performSegueWithIdentifier:@"goToDetailSeedVC" sender:nil];
+}
+
 #pragma mark - ServerCommunicatorDelegate
 
 - (void)handleRequestCompletion:(ASIHTTPRequest*)request {
@@ -124,6 +141,7 @@
         [_dataArray removeAllObjects];
         for (NSDictionary *dict in array) {
             SeedInfo *info = [[SeedInfo alloc] init];
+            info.seedId = dict[@"id"];
             info.seedName = dict[@"seed"];
             info.seedImageUrlString = dict[@"photo"];
             [_dataArray addObject:info];
@@ -131,9 +149,5 @@
     }
     [_tableView reloadData];
 }
-
-@end
-
-@implementation SeedInfo
 
 @end

@@ -34,6 +34,8 @@
 		A5B82F3D1C4E36B2006B21E2 /* SeedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B82F3B1C4E36B2006B21E2 /* SeedTableViewCell.m */; };
 		A5B82F3E1C4E36B2006B21E2 /* SeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5B82F3C1C4E36B2006B21E2 /* SeedTableViewCell.xib */; };
 		A5B82F411C4E3A7C006B21E2 /* SeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B82F401C4E3A7C006B21E2 /* SeedViewController.m */; };
+		A5E528BF1C9865720020122E /* SeedDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E528BE1C9865720020122E /* SeedDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
+		A5E528C21C9867CD0020122E /* SeedInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E528C11C9867CD0020122E /* SeedInfo.m */; settings = {ASSET_TAGS = (); }; };
 		B17F77361C46B219003B4ED2 /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B17F77341C46B219003B4ED2 /* NewsTableViewCell.m */; };
 		B17F77371C46B219003B4ED2 /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B17F77351C46B219003B4ED2 /* NewsTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -106,6 +108,10 @@
 		A5B82F3C1C4E36B2006B21E2 /* SeedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SeedTableViewCell.xib; sourceTree = "<group>"; };
 		A5B82F3F1C4E3A7C006B21E2 /* SeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeedViewController.h; sourceTree = "<group>"; };
 		A5B82F401C4E3A7C006B21E2 /* SeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeedViewController.m; sourceTree = "<group>"; };
+		A5E528BD1C9865720020122E /* SeedDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeedDetailViewController.h; sourceTree = "<group>"; };
+		A5E528BE1C9865720020122E /* SeedDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeedDetailViewController.m; sourceTree = "<group>"; };
+		A5E528C01C9867CD0020122E /* SeedInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeedInfo.h; sourceTree = "<group>"; };
+		A5E528C11C9867CD0020122E /* SeedInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeedInfo.m; sourceTree = "<group>"; };
 		ADCBE6F37512260E6C30FF4B /* Pods-FBAgricultureSystem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBAgricultureSystem.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FBAgricultureSystem/Pods-FBAgricultureSystem.debug.xcconfig"; sourceTree = "<group>"; };
 		B17F77331C46B219003B4ED2 /* NewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableViewCell.h; sourceTree = "<group>"; };
 		B17F77341C46B219003B4ED2 /* NewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewCell.m; sourceTree = "<group>"; };
@@ -160,6 +166,8 @@
 			children = (
 				A50986DE1C7A093900EDB7D7 /* NewsInfo.h */,
 				A50986DF1C7A093900EDB7D7 /* NewsInfo.m */,
+				A5E528C01C9867CD0020122E /* SeedInfo.h */,
+				A5E528C11C9867CD0020122E /* SeedInfo.m */,
 			);
 			name = "实体类";
 			sourceTree = "<group>";
@@ -203,6 +211,8 @@
 				A50986DA1C7A02F400EDB7D7 /* NewsDetailViewController.m */,
 				A5B82F3F1C4E3A7C006B21E2 /* SeedViewController.h */,
 				A5B82F401C4E3A7C006B21E2 /* SeedViewController.m */,
+				A5E528BD1C9865720020122E /* SeedDetailViewController.h */,
+				A5E528BE1C9865720020122E /* SeedDetailViewController.m */,
 				A56B08621C97F26F00AFFE1D /* RequestViewController.h */,
 				A56B08631C97F26F00AFFE1D /* RequestViewController.m */,
 				A56B08651C97F30B00AFFE1D /* RequestTableViewCell.h */,
@@ -290,7 +300,6 @@
 				A50DF2181C45EE3D00A817F8 /* Frameworks */,
 				A50DF2191C45EE3D00A817F8 /* Resources */,
 				CA9D6AF204D61CC177C91E06 /* Copy Pods Resources */,
-				D8C089D8125472BFF4CBB798 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -428,21 +437,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FBAgricultureSystem/Pods-FBAgricultureSystem-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D8C089D8125472BFF4CBB798 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FBAgricultureSystem/Pods-FBAgricultureSystem-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		E5F2F3A4BB1FB8237200375C /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -470,6 +464,7 @@
 				A50986DB1C7A02F400EDB7D7 /* NewsDetailViewController.m in Sources */,
 				A50DF2581C46521100A817F8 /* LoginViewController.m in Sources */,
 				A50DF2261C45EE3D00A817F8 /* ViewController.m in Sources */,
+				A5E528BF1C9865720020122E /* SeedDetailViewController.m in Sources */,
 				A5B82F3D1C4E36B2006B21E2 /* SeedTableViewCell.m in Sources */,
 				A56B82D51C50EB7B00828865 /* ProgressWrapper.m in Sources */,
 				A56B08641C97F26F00AFFE1D /* RequestViewController.m in Sources */,
@@ -482,6 +477,7 @@
 				A50DF2201C45EE3D00A817F8 /* main.m in Sources */,
 				A50DF2621C465D2D00A817F8 /* RootViewController.m in Sources */,
 				A50986E01C7A093900EDB7D7 /* NewsInfo.m in Sources */,
+				A5E528C21C9867CD0020122E /* SeedInfo.m in Sources */,
 				B17F77361C46B219003B4ED2 /* NewsTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,10 +11,3 @@
 @interface SeedViewController : UIViewController
 
 @end
-
-@interface SeedInfo : NSObject
-
-@property (nonatomic, copy) NSString *seedName;
-@property (nonatomic, copy) NSString *seedImageUrlString;
-
-@end
