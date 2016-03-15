@@ -9,10 +9,12 @@
 #import "SeedViewController.h"
 #import "SeedTableViewCell.h"
 #import "UIImageView+WebCache.h"
+#import "ServerCommunicator.h"
 
 @interface SeedViewController ()<UITableViewDataSource, UITableViewDelegate>
 {
     NSMutableArray *_dataArray;
+    ServerCommunicator *_serverCommunicator;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -24,7 +26,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self createFakeDatas];
+//    [self createFakeDatas];
+    [self initVariables];
+    [self getSeedList];
+}
+
+- (void)initVariables {
+    _dataArray = [[NSMutableArray alloc] init];
+}
+
+- (void)initServerCommunicator {
+    if (!_serverCommunicator) {
+        _serverCommunicator = [[ServerCommunicator alloc] init];
+    }
+}
+
+- (void)getSeedList {
+    [self initServerCommunicator];
+    [_serverCommunicator prepare:self loadingInView:self.view];
+    [_serverCommunicator getSeedList];
 }
 
 - (void)createFakeDatas
@@ -71,7 +91,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 143.f;
+    return 185.f;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -95,7 +115,22 @@
     return cell;
 }
 
-#pragma mark -UITableViewDelegate
+#pragma mark - ServerCommunicatorDelegate
+
+- (void)handleRequestCompletion:(ASIHTTPRequest*)request {
+    id obj = [_serverCommunicator parseObjectFromRequest:request];
+    if ([obj isKindOfClass:[NSArray class]]) {
+        NSArray *array = (NSArray *)obj;
+        [_dataArray removeAllObjects];
+        for (NSDictionary *dict in array) {
+            SeedInfo *info = [[SeedInfo alloc] init];
+            info.seedName = dict[@"seed"];
+            info.seedImageUrlString = dict[@"photo"];
+            [_dataArray addObject:info];
+        }
+    }
+    [_tableView reloadData];
+}
 
 @end
 

@@ -48,4 +48,7 @@
 - (void)getNewsList;
 - (void)getNewsDetailById:(NSString *)newsId;
 
+//获取种子列表
+- (void)getSeedList;
+
 @end

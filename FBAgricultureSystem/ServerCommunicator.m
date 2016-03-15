@@ -323,6 +323,11 @@
     [self requestAsynchronous:urlString needAccessToken:NO];
 }
 
+- (void)getSeedList {
+    NSString *urlString = [NSString stringWithFormat:@"%@/app/seed/list", [self getServerAddress]];
+    [self requestAsynchronous:urlString needAccessToken:NO];
+}
+
 - (void)getNewsDetailById:(NSString *)newsId {
     NSString *urlString = [NSString stringWithFormat:@"%@/app/news/getNewsById?id=%@", [self getServerAddress], newsId];
     [self requestAsynchronous:urlString needAccessToken:NO];

@@ -7,8 +7,9 @@
 //
 
 #import "RootViewController.h"
+#import "NewsViewController.h"
 
-@interface RootViewController ()
+@interface RootViewController ()<UITabBarControllerDelegate>
 
 @end
 
@@ -33,5 +34,12 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - UITabBarControllerDelegate
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+    if ([viewController isKindOfClass:[NewsViewController class]]) {
+        [(NewsViewController *)viewController getNewsArray];
+    }
+}
 
 @end

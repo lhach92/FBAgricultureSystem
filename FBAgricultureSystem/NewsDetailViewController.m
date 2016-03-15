@@ -9,6 +9,7 @@
 #import "NewsDetailViewController.h"
 #import "ServerCommunicator.h"
 #import "NewsInfo.h"
+#import "UIImageView+WebCache.h"
 
 @interface NewsDetailViewController ()<ServerCommunicatorDelegate>
 {
@@ -18,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet UIScrollView *imageScrollView;
 @property (weak, nonatomic) IBOutlet UITextView *newsTextView;
+@property (weak, nonatomic) IBOutlet UIImageView *newsImageView;
 
 @end
 
@@ -46,6 +48,9 @@
     self.titleLabel.text = newsInfo.newsTitle;
     self.dateLabel.text = newsInfo.newsDate;
     self.newsTextView.text = newsInfo.newsDescription;
+    [_newsImageView sd_setImageWithURL:[NSURL URLWithString:newsInfo.newsImageUrlString] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -77,6 +82,7 @@
         newsInfo.newsTitle = dict[@"title"];
         newsInfo.newsDescription = dict[@"content"];
         newsInfo.newsDate = [NSString stringWithFormat:@"%@", dict[@"date"]];
+        newsInfo.newsImageUrlString = [NSString stringWithFormat:@"%@", dict[@"photo"]];
         [self handleHasGotNewsInfo:newsInfo];
     }
 }

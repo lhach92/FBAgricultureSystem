@@ -10,4 +10,6 @@
 
 @interface NewsViewController : UIViewController
 
+- (void)getNewsArray;
+
 @end

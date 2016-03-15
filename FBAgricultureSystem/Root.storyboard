@@ -129,13 +129,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2AF-0d-bcT">
-                                <rect key="frame" x="0.0" y="150" width="600" height="120"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="2y9-ay-YrU"/>
-                                </constraints>
-                            </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9aH-tQ-m6z">
                                 <rect key="frame" x="20" y="117" width="560" height="25"/>
                                 <animations/>
@@ -153,35 +146,36 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n6C-iS-IWR">
+                                <rect key="frame" x="0.0" y="150" width="600" height="128"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="OaG-3c-End"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="n6C-iS-IWR" firstAttribute="width" secondItem="Q4N-m2-olL" secondAttribute="width" id="2UN-5P-QJJ"/>
                             <constraint firstItem="9aH-tQ-m6z" firstAttribute="top" secondItem="Ees-f2-Zff" secondAttribute="bottom" constant="9" id="3OF-wY-QXF"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Ees-f2-Zff" secondAttribute="leading" id="6vW-zC-Hrg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DI3-nT-cEd" secondAttribute="trailing" constant="-11" id="76o-2i-LZn"/>
-                            <constraint firstItem="2AF-0d-bcT" firstAttribute="width" secondItem="Q4N-m2-olL" secondAttribute="width" id="CYj-HF-8BZ"/>
                             <constraint firstItem="Ees-f2-Zff" firstAttribute="top" secondItem="nkH-ME-QhH" secondAttribute="bottom" constant="8" id="Mks-Ub-Vn4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ees-f2-Zff" secondAttribute="trailing" id="N7v-E7-pOK"/>
+                            <constraint firstItem="n6C-iS-IWR" firstAttribute="centerX" secondItem="Q4N-m2-olL" secondAttribute="centerX" id="RGH-Rv-OTc"/>
+                            <constraint firstItem="n6C-iS-IWR" firstAttribute="top" secondItem="9aH-tQ-m6z" secondAttribute="bottom" constant="8" id="b9E-4r-JS3"/>
+                            <constraint firstItem="DI3-nT-cEd" firstAttribute="top" secondItem="9aH-tQ-m6z" secondAttribute="bottom" constant="136" id="g9O-7a-EUd"/>
                             <constraint firstItem="9aH-tQ-m6z" firstAttribute="width" secondItem="Ees-f2-Zff" secondAttribute="width" id="h9w-iw-QJR"/>
                             <constraint firstItem="DI3-nT-cEd" firstAttribute="leading" secondItem="Q4N-m2-olL" secondAttribute="leadingMargin" constant="-11" id="hrY-zY-i6Z"/>
-                            <constraint firstItem="2AF-0d-bcT" firstAttribute="height" secondItem="Q4N-m2-olL" secondAttribute="height" id="iqc-dt-lmX"/>
                             <constraint firstItem="uWG-ji-3Oh" firstAttribute="top" secondItem="DI3-nT-cEd" secondAttribute="bottom" constant="8" id="iy4-kL-4c2"/>
                             <constraint firstItem="Ees-f2-Zff" firstAttribute="centerX" secondItem="Q4N-m2-olL" secondAttribute="centerX" id="mJS-IQ-Osu"/>
                             <constraint firstItem="9aH-tQ-m6z" firstAttribute="centerX" secondItem="Q4N-m2-olL" secondAttribute="centerX" id="mTk-0Z-xS7"/>
-                            <constraint firstItem="2AF-0d-bcT" firstAttribute="centerX" secondItem="Q4N-m2-olL" secondAttribute="centerX" id="q6q-MU-wj2"/>
-                            <constraint firstItem="2AF-0d-bcT" firstAttribute="top" secondItem="Ees-f2-Zff" secondAttribute="bottom" constant="42" id="rOY-mG-Lnk"/>
-                            <constraint firstItem="DI3-nT-cEd" firstAttribute="top" secondItem="2AF-0d-bcT" secondAttribute="bottom" constant="8" id="sxF-YL-L44"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="iqc-dt-lmX"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="dateLabel" destination="9aH-tQ-m6z" id="8uQ-ba-Pcq"/>
-                        <outlet property="imageScrollView" destination="2AF-0d-bcT" id="6fC-Lc-HrC"/>
+                        <outlet property="newsImageView" destination="n6C-iS-IWR" id="uXH-PC-zgB"/>
                         <outlet property="newsTextView" destination="DI3-nT-cEd" id="iVB-m4-iMj"/>
                         <outlet property="titleLabel" destination="Ees-f2-Zff" id="nV8-gj-wmj"/>
                     </connections>
@@ -220,7 +214,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MOV-Aq-nW6">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MOV-Aq-nW6">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
