@@ -25,7 +25,6 @@
 		A56B08641C97F26F00AFFE1D /* RequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A56B08631C97F26F00AFFE1D /* RequestViewController.m */; };
 		A56B08681C97F30B00AFFE1D /* RequestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A56B08661C97F30B00AFFE1D /* RequestTableViewCell.m */; };
 		A56B08691C97F30B00AFFE1D /* RequestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A56B08671C97F30B00AFFE1D /* RequestTableViewCell.xib */; };
-		A56B086B1C97F5A400AFFE1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A56B086A1C97F5A400AFFE1D /* Assets.xcassets */; };
 		A56B82C61C50C6C800828865 /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A56B82C51C50C6C800828865 /* WeatherViewController.m */; };
 		A56B82CC1C50E8AF00828865 /* WeatherInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A56B82CB1C50E8AF00828865 /* WeatherInfoManager.m */; };
 		A56B82D01C50EB0600828865 /* ServerCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = A56B82CF1C50EB0600828865 /* ServerCommunicator.m */; };
@@ -34,8 +33,9 @@
 		A5B82F3D1C4E36B2006B21E2 /* SeedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B82F3B1C4E36B2006B21E2 /* SeedTableViewCell.m */; };
 		A5B82F3E1C4E36B2006B21E2 /* SeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5B82F3C1C4E36B2006B21E2 /* SeedTableViewCell.xib */; };
 		A5B82F411C4E3A7C006B21E2 /* SeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B82F401C4E3A7C006B21E2 /* SeedViewController.m */; };
-		A5E528BF1C9865720020122E /* SeedDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E528BE1C9865720020122E /* SeedDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
-		A5E528C21C9867CD0020122E /* SeedInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E528C11C9867CD0020122E /* SeedInfo.m */; settings = {ASSET_TAGS = (); }; };
+		A5E0377C1CB3B1C700CDA000 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5E0377B1CB3B1C700CDA000 /* Assets.xcassets */; };
+		A5E528BF1C9865720020122E /* SeedDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E528BE1C9865720020122E /* SeedDetailViewController.m */; };
+		A5E528C21C9867CD0020122E /* SeedInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E528C11C9867CD0020122E /* SeedInfo.m */; };
 		B17F77361C46B219003B4ED2 /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B17F77341C46B219003B4ED2 /* NewsTableViewCell.m */; };
 		B17F77371C46B219003B4ED2 /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B17F77351C46B219003B4ED2 /* NewsTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -92,7 +92,6 @@
 		A56B08651C97F30B00AFFE1D /* RequestTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestTableViewCell.h; sourceTree = "<group>"; };
 		A56B08661C97F30B00AFFE1D /* RequestTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestTableViewCell.m; sourceTree = "<group>"; };
 		A56B08671C97F30B00AFFE1D /* RequestTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RequestTableViewCell.xib; sourceTree = "<group>"; };
-		A56B086A1C97F5A400AFFE1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A56B82C41C50C6C800828865 /* WeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherViewController.h; sourceTree = "<group>"; };
 		A56B82C51C50C6C800828865 /* WeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherViewController.m; sourceTree = "<group>"; };
 		A56B82CA1C50E8AF00828865 /* WeatherInfoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherInfoManager.h; sourceTree = "<group>"; };
@@ -108,6 +107,7 @@
 		A5B82F3C1C4E36B2006B21E2 /* SeedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SeedTableViewCell.xib; sourceTree = "<group>"; };
 		A5B82F3F1C4E3A7C006B21E2 /* SeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeedViewController.h; sourceTree = "<group>"; };
 		A5B82F401C4E3A7C006B21E2 /* SeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeedViewController.m; sourceTree = "<group>"; };
+		A5E0377B1CB3B1C700CDA000 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5E528BD1C9865720020122E /* SeedDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeedDetailViewController.h; sourceTree = "<group>"; };
 		A5E528BE1C9865720020122E /* SeedDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeedDetailViewController.m; sourceTree = "<group>"; };
 		A5E528C01C9867CD0020122E /* SeedInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeedInfo.h; sourceTree = "<group>"; };
@@ -232,7 +232,7 @@
 				A50DF2591C4654B100A817F8 /* Login.storyboard */,
 				A50DF25B1C4655F500A817F8 /* Root.storyboard */,
 				A50DF22C1C45EE3D00A817F8 /* LaunchScreen.storyboard */,
-				A56B086A1C97F5A400AFFE1D /* Assets.xcassets */,
+				A5E0377B1CB3B1C700CDA000 /* Assets.xcassets */,
 				A50DF22F1C45EE3D00A817F8 /* Info.plist */,
 				A50986DD1C7A091E00EDB7D7 /* 实体类 */,
 				A56B82D21C50EB7100828865 /* Tools */,
@@ -400,7 +400,7 @@
 				A5B82F3E1C4E36B2006B21E2 /* SeedTableViewCell.xib in Resources */,
 				A56B08691C97F30B00AFFE1D /* RequestTableViewCell.xib in Resources */,
 				B17F77371C46B219003B4ED2 /* NewsTableViewCell.xib in Resources */,
-				A56B086B1C97F5A400AFFE1D /* Assets.xcassets in Resources */,
+				A5E0377C1CB3B1C700CDA000 /* Assets.xcassets in Resources */,
 				A50DF2291C45EE3D00A817F8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
