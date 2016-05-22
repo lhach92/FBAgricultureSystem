@@ -147,6 +147,7 @@
             info.newsId = dict[@"id"];
             info.newsTitle = dict[@"title"];
             info.newsDescription = dict[@"content"];
+            info.newsImageUrlString = [NSString stringWithFormat:@"%@", dict[@"photo"]];
             [_dataArray addObject:info];
         }
         [_tableView reloadData];

@@ -350,4 +350,33 @@
     [self requestAsynchronous:urlString needAccessToken:NO];
 }
 
+- (void)loginWithUsername:(NSString *)userName
+                 password:(NSString *)password {
+    NSString *urlString = [NSString stringWithFormat:@"%@/app/login", [self getServerAddress]];
+    _request = [ASIFormDataRequest requestWithURL:[NSURL URLWithString:urlString]];
+    [self setPostValue:userName forKey:@"username"];
+    [self setPostValue:password forKey:@"password"];
+    [self requestAsynchronous:nil];
+}
+
+- (void)registerWithUsername:(NSString *)userName
+                    password:(NSString *)password {
+    NSString *urlString = [NSString stringWithFormat:@"%@/app/register", [self getServerAddress]];
+    _request = [ASIFormDataRequest requestWithURL:[NSURL URLWithString:urlString]];
+    [self setPostValue:userName forKey:@"username"];
+    [self setPostValue:password forKey:@"password"];
+    [self requestAsynchronous:nil];
+}
+
+- (void)postFeedBackWithTitle:(NSString *)title
+                        phone:(NSString *)phone
+                      content:(NSString *)content {
+    NSString *urlString = [NSString stringWithFormat:@"%@/app/feedback", [self getServerAddress]];
+    _request = [ASIFormDataRequest requestWithURL:[NSURL URLWithString:urlString]];
+    [self setPostValue:title forKey:@"title"];
+    [self setPostValue:phone forKey:@"phone"];
+    [self setPostValue:content forKey:@"content"];
+    [self requestAsynchronous:nil];
+}
+
 @end

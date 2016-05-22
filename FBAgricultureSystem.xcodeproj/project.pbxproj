@@ -22,6 +22,8 @@
 		A50DF25C1C4655F500A817F8 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A50DF25B1C4655F500A817F8 /* Root.storyboard */; };
 		A50DF2621C465D2D00A817F8 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A50DF2611C465D2D00A817F8 /* RootViewController.m */; };
 		A50DF2651C465D8B00A817F8 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A50DF2641C465D8B00A817F8 /* NewsViewController.m */; };
+		A52244A51CF17CB6007708C7 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A52244A41CF17CB6007708C7 /* RegisterViewController.m */; };
+		A52244A81CF1839C007708C7 /* FeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A52244A71CF1839C007708C7 /* FeedBackViewController.m */; };
 		A56B08641C97F26F00AFFE1D /* RequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A56B08631C97F26F00AFFE1D /* RequestViewController.m */; };
 		A56B08681C97F30B00AFFE1D /* RequestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A56B08661C97F30B00AFFE1D /* RequestTableViewCell.m */; };
 		A56B08691C97F30B00AFFE1D /* RequestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A56B08671C97F30B00AFFE1D /* RequestTableViewCell.xib */; };
@@ -87,6 +89,10 @@
 		A50DF2611C465D2D00A817F8 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		A50DF2631C465D8B00A817F8 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
 		A50DF2641C465D8B00A817F8 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
+		A52244A31CF17CB6007708C7 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		A52244A41CF17CB6007708C7 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		A52244A61CF1839C007708C7 /* FeedBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedBackViewController.h; sourceTree = "<group>"; };
+		A52244A71CF1839C007708C7 /* FeedBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedBackViewController.m; sourceTree = "<group>"; };
 		A56B08621C97F26F00AFFE1D /* RequestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestViewController.h; sourceTree = "<group>"; };
 		A56B08631C97F26F00AFFE1D /* RequestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestViewController.m; sourceTree = "<group>"; };
 		A56B08651C97F30B00AFFE1D /* RequestTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestTableViewCell.h; sourceTree = "<group>"; };
@@ -205,6 +211,8 @@
 				A50DF2571C46521100A817F8 /* LoginViewController.m */,
 				A50DF2601C465D2D00A817F8 /* RootViewController.h */,
 				A50DF2611C465D2D00A817F8 /* RootViewController.m */,
+				A52244A31CF17CB6007708C7 /* RegisterViewController.h */,
+				A52244A41CF17CB6007708C7 /* RegisterViewController.m */,
 				A50DF2631C465D8B00A817F8 /* NewsViewController.h */,
 				A50DF2641C465D8B00A817F8 /* NewsViewController.m */,
 				A50986D91C7A02F400EDB7D7 /* NewsDetailViewController.h */,
@@ -220,6 +228,8 @@
 				A56B08671C97F30B00AFFE1D /* RequestTableViewCell.xib */,
 				A56B82C41C50C6C800828865 /* WeatherViewController.h */,
 				A56B82C51C50C6C800828865 /* WeatherViewController.m */,
+				A52244A61CF1839C007708C7 /* FeedBackViewController.h */,
+				A52244A71CF1839C007708C7 /* FeedBackViewController.m */,
 				A56B82CA1C50E8AF00828865 /* WeatherInfoManager.h */,
 				A56B82CB1C50E8AF00828865 /* WeatherInfoManager.m */,
 				B17F77331C46B219003B4ED2 /* NewsTableViewCell.h */,
@@ -463,6 +473,7 @@
 				A56B08681C97F30B00AFFE1D /* RequestTableViewCell.m in Sources */,
 				A50986DB1C7A02F400EDB7D7 /* NewsDetailViewController.m in Sources */,
 				A50DF2581C46521100A817F8 /* LoginViewController.m in Sources */,
+				A52244A51CF17CB6007708C7 /* RegisterViewController.m in Sources */,
 				A50DF2261C45EE3D00A817F8 /* ViewController.m in Sources */,
 				A5E528BF1C9865720020122E /* SeedDetailViewController.m in Sources */,
 				A5B82F3D1C4E36B2006B21E2 /* SeedTableViewCell.m in Sources */,
@@ -479,6 +490,7 @@
 				A50986E01C7A093900EDB7D7 /* NewsInfo.m in Sources */,
 				A5E528C21C9867CD0020122E /* SeedInfo.m in Sources */,
 				B17F77361C46B219003B4ED2 /* NewsTableViewCell.m in Sources */,
+				A52244A81CF1839C007708C7 /* FeedBackViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

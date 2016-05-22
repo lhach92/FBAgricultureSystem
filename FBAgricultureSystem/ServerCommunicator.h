@@ -55,4 +55,14 @@
 //获取需求列表
 - (void)getRequestList;
 
+- (void)postFeedBackWithTitle:(NSString *)title
+                        phone:(NSString *)phone
+                      content:(NSString *)content;
+
+- (void)loginWithUsername:(NSString *)userName
+                 password:(NSString *)password;
+
+- (void)registerWithUsername:(NSString *)userName
+                    password:(NSString *)password;
+
 @end

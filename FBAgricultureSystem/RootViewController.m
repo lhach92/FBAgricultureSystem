@@ -22,6 +22,11 @@
     self.tabBar.tintColor = [UIColor colorWithRed:0/255.0 green:178/255.0 blue:15/255.0 alpha:1];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    self.tabBar.hidden = NO;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
