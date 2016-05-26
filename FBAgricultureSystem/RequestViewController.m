@@ -85,7 +85,7 @@
             info.productName = dict[@"product"];
             info.person = dict[@"person"];
             info.telephone = [NSString stringWithFormat:@"%@", dict[@"phone"]];
-            info.date = [NSString stringWithFormat:@"%@", dict[@"date"]];
+            info.date = [NSString stringWithFormat:@"%@", dict[@"dateString"]];
             info.productCount = dict[@"count"];
             info.city = dict[@"city"];
             

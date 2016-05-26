@@ -310,7 +310,7 @@
 
 - (NSString*)getServerAddress
 {
-    return @"http://192.168.101.190:8080/rest";
+    return @"http://172.27.35.2:8080/rest";
 }
 
 - (NSString*)getGetDataUrl:(NSString*)categoryId
@@ -352,7 +352,7 @@
 
 - (void)loginWithUsername:(NSString *)userName
                  password:(NSString *)password {
-    NSString *urlString = [NSString stringWithFormat:@"%@/app/login", [self getServerAddress]];
+    NSString *urlString = [NSString stringWithFormat:@"%@/app/user/login", [self getServerAddress]];
     _request = [ASIFormDataRequest requestWithURL:[NSURL URLWithString:urlString]];
     [self setPostValue:userName forKey:@"username"];
     [self setPostValue:password forKey:@"password"];
@@ -361,7 +361,7 @@
 
 - (void)registerWithUsername:(NSString *)userName
                     password:(NSString *)password {
-    NSString *urlString = [NSString stringWithFormat:@"%@/app/register", [self getServerAddress]];
+    NSString *urlString = [NSString stringWithFormat:@"%@/app/user/register", [self getServerAddress]];
     _request = [ASIFormDataRequest requestWithURL:[NSURL URLWithString:urlString]];
     [self setPostValue:userName forKey:@"username"];
     [self setPostValue:password forKey:@"password"];
@@ -371,7 +371,7 @@
 - (void)postFeedBackWithTitle:(NSString *)title
                         phone:(NSString *)phone
                       content:(NSString *)content {
-    NSString *urlString = [NSString stringWithFormat:@"%@/app/feedback", [self getServerAddress]];
+    NSString *urlString = [NSString stringWithFormat:@"%@/app/message/insert", [self getServerAddress]];
     _request = [ASIFormDataRequest requestWithURL:[NSURL URLWithString:urlString]];
     [self setPostValue:title forKey:@"title"];
     [self setPostValue:phone forKey:@"phone"];

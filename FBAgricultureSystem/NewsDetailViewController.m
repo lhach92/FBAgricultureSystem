@@ -81,7 +81,7 @@
         NewsInfo *newsInfo = [[NewsInfo alloc] init];
         newsInfo.newsTitle = dict[@"title"];
         newsInfo.newsDescription = dict[@"content"];
-        newsInfo.newsDate = [NSString stringWithFormat:@"%@", dict[@"date"]];
+        newsInfo.newsDate = [NSString stringWithFormat:@"%@", dict[@"dateString"]];
         newsInfo.newsImageUrlString = [NSString stringWithFormat:@"%@", dict[@"photo"]];
         [self handleHasGotNewsInfo:newsInfo];
     }
