@@ -196,7 +196,7 @@
         <!--Seed View Controller-->
         <scene sceneID="cew-S5-n9c">
             <objects>
-                <viewController id="SXe-ys-CIe" customClass="SeedViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SeedViewControllerId" id="SXe-ys-CIe" customClass="SeedViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aDo-td-3gd"/>
                         <viewControllerLayoutGuide type="bottom" id="H7v-AU-6ok"/>
@@ -297,7 +297,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gMq-eq-2FL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1659" y="-1562"/>
+            <point key="canvasLocation" x="1719" y="-1192"/>
         </scene>
         <!--Weather View Controller-->
         <scene sceneID="MWm-Bi-bOn">
@@ -481,10 +481,10 @@
             </objects>
             <point key="canvasLocation" x="287" y="-724"/>
         </scene>
-        <!--Seed View Controller-->
+        <!--Recommend Seed View Controller-->
         <scene sceneID="GIt-wG-L0T">
             <objects>
-                <viewController id="veN-DJ-0H1" customClass="SeedViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecommendSeedViewControllerId" id="veN-DJ-0H1" customClass="RecommendSeedViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hSN-5q-UoV"/>
                         <viewControllerLayoutGuide type="bottom" id="ALx-sf-c71"/>
@@ -512,7 +512,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="NtE-yI-Ggy"/>
                     <connections>
-                        <outlet property="tableView" destination="uUW-sh-h6U" id="cdp-b9-bql"/>
+                        <outlet property="tableView" destination="uUW-sh-h6U" id="Kxh-K6-vz4"/>
+                        <segue destination="DiM-6O-l0G" kind="showDetail" id="RaJ-21-Ijy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nue-UY-gtW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -584,4 +585,7 @@
         <image name="seed_unselected" width="30" height="30"/>
         <image name="weather_unselected" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="RaJ-21-Ijy"/>
+    </inferredMetricsTieBreakers>
 </document>

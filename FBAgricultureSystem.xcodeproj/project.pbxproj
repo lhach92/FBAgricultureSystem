@@ -32,6 +32,7 @@
 		A56B82D01C50EB0600828865 /* ServerCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = A56B82CF1C50EB0600828865 /* ServerCommunicator.m */; };
 		A56B82D51C50EB7B00828865 /* ProgressWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = A56B82D41C50EB7B00828865 /* ProgressWrapper.m */; };
 		A56B82D81C51059800828865 /* StringTools.m in Sources */ = {isa = PBXBuildFile; fileRef = A56B82D71C51059800828865 /* StringTools.m */; };
+		A5B80A521CF8936F006F0783 /* RecommendSeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B80A511CF8936F006F0783 /* RecommendSeedViewController.m */; };
 		A5B82F3D1C4E36B2006B21E2 /* SeedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B82F3B1C4E36B2006B21E2 /* SeedTableViewCell.m */; };
 		A5B82F3E1C4E36B2006B21E2 /* SeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5B82F3C1C4E36B2006B21E2 /* SeedTableViewCell.xib */; };
 		A5B82F411C4E3A7C006B21E2 /* SeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B82F401C4E3A7C006B21E2 /* SeedViewController.m */; };
@@ -108,6 +109,8 @@
 		A56B82D41C50EB7B00828865 /* ProgressWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressWrapper.m; sourceTree = "<group>"; };
 		A56B82D61C51059800828865 /* StringTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringTools.h; sourceTree = "<group>"; };
 		A56B82D71C51059800828865 /* StringTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringTools.m; sourceTree = "<group>"; };
+		A5B80A501CF8936F006F0783 /* RecommendSeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendSeedViewController.h; sourceTree = "<group>"; };
+		A5B80A511CF8936F006F0783 /* RecommendSeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendSeedViewController.m; sourceTree = "<group>"; };
 		A5B82F3A1C4E36B2006B21E2 /* SeedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeedTableViewCell.h; sourceTree = "<group>"; };
 		A5B82F3B1C4E36B2006B21E2 /* SeedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeedTableViewCell.m; sourceTree = "<group>"; };
 		A5B82F3C1C4E36B2006B21E2 /* SeedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SeedTableViewCell.xib; sourceTree = "<group>"; };
@@ -219,6 +222,8 @@
 				A50986DA1C7A02F400EDB7D7 /* NewsDetailViewController.m */,
 				A5B82F3F1C4E3A7C006B21E2 /* SeedViewController.h */,
 				A5B82F401C4E3A7C006B21E2 /* SeedViewController.m */,
+				A5B80A501CF8936F006F0783 /* RecommendSeedViewController.h */,
+				A5B80A511CF8936F006F0783 /* RecommendSeedViewController.m */,
 				A5E528BD1C9865720020122E /* SeedDetailViewController.h */,
 				A5E528BE1C9865720020122E /* SeedDetailViewController.m */,
 				A56B08621C97F26F00AFFE1D /* RequestViewController.h */,
@@ -472,6 +477,7 @@
 				A56B82D81C51059800828865 /* StringTools.m in Sources */,
 				A56B08681C97F30B00AFFE1D /* RequestTableViewCell.m in Sources */,
 				A50986DB1C7A02F400EDB7D7 /* NewsDetailViewController.m in Sources */,
+				A5B80A521CF8936F006F0783 /* RecommendSeedViewController.m in Sources */,
 				A50DF2581C46521100A817F8 /* LoginViewController.m in Sources */,
 				A52244A51CF17CB6007708C7 /* RegisterViewController.m in Sources */,
 				A50DF2261C45EE3D00A817F8 /* ViewController.m in Sources */,

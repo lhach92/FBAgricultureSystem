@@ -8,6 +8,7 @@
 
 #import "RootViewController.h"
 #import "NewsViewController.h"
+#import "SeedViewController.h"
 
 @interface RootViewController ()<UITabBarControllerDelegate>
 
@@ -46,6 +47,8 @@
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
     if ([viewController isKindOfClass:[NewsViewController class]]) {
         [(NewsViewController *)viewController getNewsArray];
+    } else if ([viewController isKindOfClass:[SeedViewController class]]) {
+        
     }
 }
 
