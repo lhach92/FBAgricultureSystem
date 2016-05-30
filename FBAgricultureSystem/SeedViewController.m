@@ -89,7 +89,6 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    self.hidesBottomBarWhenPushed = YES;
     SeedDetailViewController *vc = segue.destinationViewController;
     vc.hidesBottomBarWhenPushed = YES;
     vc.seedId = _currentSeedInfo.seedId;
