@@ -47,7 +47,7 @@
 }
 
 - (void)initUI {
-    [self.headerImageView sd_setImageWithURL:[NSURL URLWithString:@"https://img.alicdn.com/tps/TB1dUNMLpXXXXXGXFXXXXXXXXXX-520-280.jpg"]];
+    [self.headerImageView sd_setImageWithURL:[NSURL URLWithString:@"http://img.jswmw.com/home/upLoad/news/month_1505/201505051638512174.jpg"]];
     [self createRefreshView];
 }
 
