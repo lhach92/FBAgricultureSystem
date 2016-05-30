@@ -87,8 +87,8 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    self.hidesBottomBarWhenPushed = YES;
     NewsDetailViewController *vc = segue.destinationViewController;
+    vc.hidesBottomBarWhenPushed = YES;
     vc.newsId = _currentNewsInfo.newsId;
 }
 

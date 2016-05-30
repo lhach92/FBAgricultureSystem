@@ -16,7 +16,7 @@
 @interface SeedViewController ()<UITableViewDataSource, UITableViewDelegate>
 {
     NSMutableArray *_dataArray;
-    ServerCommunicator *_serverCommunicator;
+    
     
     SeedInfo *_currentSeedInfo;
 }
@@ -42,6 +42,8 @@
 - (void)initServerCommunicator {
     if (!_serverCommunicator) {
         _serverCommunicator = [[ServerCommunicator alloc] init];
+    } else {
+        [_serverCommunicator clearEnvironment];
     }
 }
 
@@ -89,6 +91,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     self.hidesBottomBarWhenPushed = YES;
     SeedDetailViewController *vc = segue.destinationViewController;
+    vc.hidesBottomBarWhenPushed = YES;
     vc.seedId = _currentSeedInfo.seedId;
 }
 

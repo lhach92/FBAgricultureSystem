@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ServerCommunicator.h"
 
 @interface SeedViewController : UIViewController
+{
+    ServerCommunicator *_serverCommunicator;
+}
+
+- (void)initServerCommunicator;
+- (void)getSeedList;
 
 @end

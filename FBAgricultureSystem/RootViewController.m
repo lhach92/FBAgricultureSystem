@@ -48,7 +48,7 @@
     if ([viewController isKindOfClass:[NewsViewController class]]) {
         [(NewsViewController *)viewController getNewsArray];
     } else if ([viewController isKindOfClass:[SeedViewController class]]) {
-        
+        [(SeedViewController *)viewController getSeedList];
     }
 }
 

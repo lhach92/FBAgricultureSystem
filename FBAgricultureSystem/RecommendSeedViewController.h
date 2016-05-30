@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SeedViewController.h"
 
-@interface RecommendSeedViewController : UIViewController
+@interface RecommendSeedViewController : SeedViewController
 
 @end
