@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "ServerCommunicator.h"
+#import "SeedInfo.h"
 
 @interface SeedViewController : UIViewController
 {
     ServerCommunicator *_serverCommunicator;
+    NSMutableArray *_dataArray;
 }
 
 - (void)initServerCommunicator;

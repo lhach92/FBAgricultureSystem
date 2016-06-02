@@ -10,7 +10,7 @@
 #import "FeedBackViewController.h"
 #import "ServerCommunicator.h"
 
-@interface FeedBackViewController ()<UITextFieldDelegate, ServerCommunicatorDelegate>
+@interface FeedBackViewController ()<UITextFieldDelegate, ServerCommunicatorDelegate, UIAlertViewDelegate>
 {
     ServerCommunicator *_serverCommunicator;
 }
@@ -61,7 +61,18 @@
 }
 
 - (void)handleRequestCompletion:(ASIHTTPRequest*)request {
-    
+    UIAlertView *al = [[UIAlertView alloc] initWithTitle:nil
+                                                 message:@"修改成功"
+                                                delegate:self
+                                       cancelButtonTitle:@"确定"
+                                       otherButtonTitles:nil, nil];
+    [al show];
+}
+
+#pragma mark -UIAlertViewDelegate
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 

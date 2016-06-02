@@ -11,13 +11,9 @@
 #import "UIImageView+WebCache.h"
 #import "ServerCommunicator.h"
 #import "SeedDetailViewController.h"
-#import "SeedInfo.h"
 
 @interface SeedViewController ()<UITableViewDataSource, UITableViewDelegate>
 {
-    NSMutableArray *_dataArray;
-    
-    
     SeedInfo *_currentSeedInfo;
 }
 
@@ -33,6 +29,7 @@
 //    [self createFakeDatas];
     [self initVariables];
     [self getSeedList];
+    self.title = @"种子";
 }
 
 - (void)initVariables {
