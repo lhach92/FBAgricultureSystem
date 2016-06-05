@@ -12,12 +12,15 @@
 #import "ServerCommunicator.h"
 #import "SeedDetailViewController.h"
 #import "SeedInfo.h"
+#import "SRRefreshView.h"
 
-@interface RecommendSeedViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface RecommendSeedViewController ()<UITableViewDelegate, UITableViewDataSource, SRRefreshDelegate>
 {
     SeedInfo *_currentSeedInfo;
     ServerCommunicator *_serverCommunicator;
     NSMutableArray *_dataArray;
+    
+    SRRefreshView *_refreshView;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -88,6 +91,20 @@
     [_tableView reloadData];
 }
 
+- (void)createRefreshView {
+    if (!_refreshView) {
+        _refreshView = [[SRRefreshView alloc] initWithFrame:CGRectMake(0, -100, CGRectGetWidth(_tableView.frame), 100)];
+        _refreshView.delegate = self;
+        _refreshView.upInset = 0;
+        _refreshView.slime.bodyColor = [UIColor colorWithRed:179/255.0 green:179/255.0 blue:179/255.0 alpha:1];
+        _refreshView.slime.skinColor = [UIColor colorWithRed:179/255.0 green:179/255.0 blue:179/255.0 alpha:1];
+        _refreshView.slime.lineWith = 1;
+        _refreshView.slime.shadowBlur = 4;
+        _refreshView.slime.shadowColor = [UIColor clearColor];
+    }
+    [_tableView addSubview:_refreshView];
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     SeedDetailViewController *vc = segue.destinationViewController;
     vc.hidesBottomBarWhenPushed = YES;
@@ -142,14 +159,34 @@
         NSArray *array = (NSArray *)obj;
         [_dataArray removeAllObjects];
         for (NSDictionary *dict in array) {
-            SeedInfo *info = [[SeedInfo alloc] init];
-            info.seedId = dict[@"id"];
-            info.seedName = dict[@"seed"];
-            info.seedImageUrlString = dict[@"photo"];
-            [_dataArray addObject:info];
+            if ([dict isKindOfClass:[NSDictionary class]]) {
+                SeedInfo *info = [[SeedInfo alloc] init];
+                info.seedId = dict[@"id"];
+                info.seedName = dict[@"seed"];
+                info.seedImageUrlString = dict[@"photo"];
+                [_dataArray addObject:info];
+            }
         }
     }
+    [self createRefreshView];
     [_tableView reloadData];
+}
+
+#pragma mark - UIScrollViewDelegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    [_refreshView scrollViewDidScroll];
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    [_refreshView scrollViewDidEndDraging];
+}
+
+#pragma mark - SRRefreshDelegate
+
+- (void)slimeRefreshStartRefresh:(SRRefreshView*)refreshView {
+    [self getSeedList];
+    [_refreshView endRefresh];
 }
 
 @end

@@ -329,7 +329,7 @@
 }
 
 - (void)getRecommendSeedList {
-    NSString *urlString = [NSString stringWithFormat:@"%@/app/seed/list", [self getServerAddress]];
+    NSString *urlString = [NSString stringWithFormat:@"http://dlnu00.wicp.net:13609/rest/app/seed/listByRand"];
     [self requestAsynchronous:urlString needAccessToken:NO];
 }
 

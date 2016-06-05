@@ -22,6 +22,7 @@
                         <segue destination="C1a-eU-f4w" kind="relationship" relationship="viewControllers" id="ng4-rJ-eKh"/>
                         <segue destination="BbV-00-VTO" kind="relationship" relationship="viewControllers" id="AY5-ha-tSE"/>
                         <segue destination="0G4-1i-eHE" kind="relationship" relationship="viewControllers" id="uYH-ZL-iYC"/>
+                        <segue destination="dXE-0c-MlC" kind="relationship" relationship="viewControllers" id="G1D-Nc-RxI"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ar1-eu-8fr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -494,7 +495,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uUW-sh-h6U">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="veN-DJ-0H1" id="WmK-3Q-Pfy"/>
@@ -504,9 +505,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="uUW-sh-h6U" firstAttribute="height" secondItem="emK-Ef-iqt" secondAttribute="height" id="Hgy-Bs-2hj"/>
+                            <constraint firstItem="uUW-sh-h6U" firstAttribute="height" secondItem="emK-Ef-iqt" secondAttribute="height" constant="-64" id="Hgy-Bs-2hj"/>
                             <constraint firstItem="uUW-sh-h6U" firstAttribute="centerX" secondItem="emK-Ef-iqt" secondAttribute="centerX" id="Vri-ja-KM6"/>
-                            <constraint firstItem="uUW-sh-h6U" firstAttribute="centerY" secondItem="emK-Ef-iqt" secondAttribute="centerY" id="gOI-Qy-uF0"/>
+                            <constraint firstItem="uUW-sh-h6U" firstAttribute="centerY" secondItem="emK-Ef-iqt" secondAttribute="centerY" constant="32" id="gOI-Qy-uF0"/>
                             <constraint firstItem="uUW-sh-h6U" firstAttribute="width" secondItem="emK-Ef-iqt" secondAttribute="width" id="mtO-Bg-wsx"/>
                         </constraints>
                     </view>
@@ -575,11 +576,65 @@
             </objects>
             <point key="canvasLocation" x="1023" y="54"/>
         </scene>
+        <!--留言板-->
+        <scene sceneID="h0B-ZR-gM1">
+            <objects>
+                <navigationController title="留言板" id="dXE-0c-MlC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="个人中心" image="person_unselected" id="3LW-4c-VBQ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qma-Lj-rmi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="HsS-7L-DmK" kind="relationship" relationship="rootViewController" id="0ug-zN-O4Y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y15-Jc-hXK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="307" y="2578"/>
+        </scene>
+        <!--个人中心-->
+        <scene sceneID="FfH-ZM-1pi">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1vP-Aj-BoT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController title="个人中心" id="HsS-7L-DmK" customClass="LogOutViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NNk-0A-eWz"/>
+                        <viewControllerLayoutGuide type="bottom" id="9NM-gW-T7R"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wit-I0-GaW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ou4-0g-fF4">
+                                <rect key="frame" x="198" y="248" width="205" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="Oyh-dx-JPD"/>
+                                    <constraint firstAttribute="width" constant="205" id="Z1v-uQ-6Wy"/>
+                                </constraints>
+                                <state key="normal" title="退出登录"/>
+                                <connections>
+                                    <action selector="logout:" destination="HsS-7L-DmK" eventType="touchUpInside" id="hfM-tW-XGN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ou4-0g-fF4" firstAttribute="centerX" secondItem="wit-I0-GaW" secondAttribute="centerX" id="9Xa-yv-67S"/>
+                            <constraint firstItem="ou4-0g-fF4" firstAttribute="centerY" secondItem="wit-I0-GaW" secondAttribute="centerY" constant="-23.5" id="vzh-Hi-8Is"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="个人中心" id="yib-3e-1nw"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1036" y="2578"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bg_blue" width="320" height="505"/>
         <image name="feedback_unselected" width="30" height="30"/>
         <image name="news_unselected" width="30" height="30"/>
+        <image name="person_unselected" width="30" height="30"/>
         <image name="recommend_unselected" width="30" height="30"/>
         <image name="request_unselected" width="30" height="30"/>
         <image name="seed_unselected" width="30" height="30"/>
