@@ -596,7 +596,6 @@
         <!--个人中心-->
         <scene sceneID="FfH-ZM-1pi">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1vP-Aj-BoT" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="个人中心" id="HsS-7L-DmK" customClass="LogOutViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NNk-0A-eWz"/>
@@ -617,15 +616,40 @@
                                     <action selector="logout:" destination="HsS-7L-DmK" eventType="touchUpInside" id="hfM-tW-XGN"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户名：fubin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q6r-jQ-n0B">
+                                <rect key="frame" x="190" y="137" width="220" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="1M3-9Z-fP7"/>
+                                    <constraint firstAttribute="height" constant="30" id="sxh-o0-oeT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="联系方式：18642888350" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YI8-qg-562">
+                                <rect key="frame" x="190" y="197" width="220" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="eeF-7g-upy"/>
+                                    <constraint firstAttribute="height" constant="30" id="qhk-w7-jNr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="ou4-0g-fF4" firstAttribute="centerX" secondItem="wit-I0-GaW" secondAttribute="centerX" id="9Xa-yv-67S"/>
+                            <constraint firstItem="YI8-qg-562" firstAttribute="centerX" secondItem="wit-I0-GaW" secondAttribute="centerX" id="Ku9-1O-b0N"/>
+                            <constraint firstItem="YI8-qg-562" firstAttribute="top" secondItem="Q6r-jQ-n0B" secondAttribute="bottom" constant="30" id="NXV-SL-5mP"/>
+                            <constraint firstItem="Q6r-jQ-n0B" firstAttribute="centerX" secondItem="wit-I0-GaW" secondAttribute="centerX" id="Ptu-Pe-ff4"/>
                             <constraint firstItem="ou4-0g-fF4" firstAttribute="centerY" secondItem="wit-I0-GaW" secondAttribute="centerY" constant="-23.5" id="vzh-Hi-8Is"/>
+                            <constraint firstItem="Q6r-jQ-n0B" firstAttribute="top" secondItem="NNk-0A-eWz" secondAttribute="bottom" constant="73" id="xrF-gF-rll"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="个人中心" id="yib-3e-1nw"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1vP-Aj-BoT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1036" y="2578"/>
         </scene>
